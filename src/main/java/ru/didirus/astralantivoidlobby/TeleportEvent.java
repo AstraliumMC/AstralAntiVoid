@@ -10,7 +10,7 @@ public class TeleportEvent implements Listener {
     public void onPlayerMove (PlayerMoveEvent e) {
         if((short) e.getPlayer().getLocation().getY() <= 0) {
             Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "spawn " + e.getPlayer().getName());
-            // Вернуть игрока на спавн при getY <= target int
+            // Телепортировать игрока на спавн при getY <= target int
         }
     }
 }
