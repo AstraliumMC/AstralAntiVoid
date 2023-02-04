@@ -1,0 +1,21 @@
+##################################################################
+#                     A s t r a l i u m M C                      #
+#                                                                #
+#          An ecosystem of various add-ons for Minecraft         #
+#          High-quality modifications for Minecraft Java         #
+#                                                                #
+#          Github: https://github.com/AstraliumMC                #
+#          Vkontakte: https://vk.com/didirus4                    #
+#                                                                #
+##################################################################
+
+# RU | В случае поломки конфигурации она пересоздается после повторого запуска сервера
+
+# RU | Использовать ли спавн локацию при падении в бездну? (true/false).
+UseSpawnLoc: false # Toggle TeleportEvent class
+# RU | Координаты спавн локации (XYZ).
+PosX: 0 # X Position
+PosY: 0 # Y Position
+PosZ: 0 # Z Position
+# RU | Название мира в который будет происходить телепортация.
+World: world # Default worlds in Minecraft: world, world_nether, world_the_end

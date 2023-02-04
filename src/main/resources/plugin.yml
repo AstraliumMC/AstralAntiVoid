@@ -1,6 +1,6 @@
 name: AstralAntiVoid
 version: '${project.version}'
-main: ru.didirus.astralantivoidlobby.AstralAntiVoidLobby
+main: ru.didirus.astralantivoid.AstralAntiVoid
 api-version: 1.19
 authors: [ didirus ]
 softdepend:
@@ -8,3 +8,8 @@ softdepend:
   - CMI
 description: Simple plugin for prevent players into void
 website: https://github.com/AstraliumMC
+commands:
+  aavreload:
+    description: Reload main configuration file with Astralium Pooooweeeeeeer!
+  aavset:
+    description: Set spawn XYZ for AstralAntiVoid Teleportation
