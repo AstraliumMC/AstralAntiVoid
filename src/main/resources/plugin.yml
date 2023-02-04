@@ -1,7 +1,7 @@
 name: AstralAntiVoid
 version: '${project.version}'
 main: ru.didirus.astralantivoid.AstralAntiVoid
-api-version: 1.19
+api-version: 1.17
 authors: [ didirus ]
 softdepend:
   - Essentials
