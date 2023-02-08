@@ -38,6 +38,8 @@ public final class AstralAntiVoid extends JavaPlugin {
         Config.get().addDefault("PosX", 0);
         Config.get().addDefault("PosY", 0);
         Config.get().addDefault("PosZ", 0);
+        Config.get().addDefault("Pitch", 0);
+        Config.get().addDefault("Yaw", 0);
         Config.get().addDefault("World", "world");
         Config.get().options().copyDefaults(true);
         Config.save();

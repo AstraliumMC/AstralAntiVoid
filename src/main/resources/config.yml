@@ -1,13 +1,14 @@
-##################################################################
-#                     A s t r a l i u m M C                      #
-#                                                                #
-#          An ecosystem of various add-ons for Minecraft         #
-#          High-quality modifications for Minecraft Java         #
-#                                                                #
-#          Github: https://github.com/AstraliumMC                #
-#          Vkontakte: https://vk.com/didirus4                    #
-#                                                                #
-##################################################################
+# ░█████╗░░██████╗████████╗██████╗░░█████╗░██╗░░░░░██╗██╗░░░██╗███╗░░░███╗       ░█████╗░██████╗░░██████╗░░░░
+# ██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██║░░░░░██║██║░░░██║████╗░████║       ██╔══██╗██╔══██╗██╔════╝░░░░
+# ███████║╚█████╗░░░░██║░░░██████╔╝███████║██║░░░░░██║██║░░░██║██╔████╔██║       ██║░░██║██████╔╝██║░░██╗░░░░
+# ██╔══██║░╚═══██╗░░░██║░░░██╔══██╗██╔══██║██║░░░░░██║██║░░░██║██║╚██╔╝██║       ██║░░██║██╔══██╗██║░░╚██╗░░░
+# ██║░░██║██████╔╝░░░██║░░░██║░░██║██║░░██║███████╗██║╚██████╔╝██║░╚═╝░██║       ╚█████╔╝██║░░██║╚██████╔╝██╗
+# ╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░╚═════╝░╚═╝░░░░░╚═╝       ░╚════╝░╚═╝░░╚═╝░╚═════╝░╚═╝
+#
+# An ecosystem of various add-ons for Minecraft
+# High-quality modifications for Minecraft Java
+# Github: https://github.com/AstraliumMC
+# Vkontakte: https://vk.com/didirus4
 
 # RU | В случае поломки конфигурации она пересоздается после повторого запуска сервера
 
@@ -17,5 +18,7 @@ UseSpawnLoc: false # Toggle TeleportEvent class
 PosX: 0 # X Position
 PosY: 0 # Y Position
 PosZ: 0 # Z Position
+Pitch: 0 # Pitch Cursor Position
+Yaw: 0 # Yaw Cursor Position
 # RU | Название мира в который будет происходить телепортация.
 World: world # Default worlds in Minecraft: world, world_nether, world_the_end

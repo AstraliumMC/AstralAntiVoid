@@ -27,7 +27,7 @@ public class TeleportEvent implements Listener {
     @EventHandler
     public void onPlayerMove (PlayerMoveEvent e) {
         if((short) e.getPlayer().getLocation().getY() <= 0 && state) {
-            Location l = new Location(Bukkit.getWorld(Config.get().getString("World")), Config.get().getDouble("PosX"), Config.get().getDouble("PosY"), Config.get().getDouble("PosZ"));
+            Location l = new Location(Bukkit.getWorld(Config.get().getString("World")), Config.get().getDouble("PosX"), Config.get().getDouble("PosY"), Config.get().getDouble("PosZ"), (float) Config.get().getDouble("Yaw"), (float) Config.get().getDouble("Pitch"));
             e.getPlayer().teleport(l, PlayerTeleportEvent.TeleportCause.UNKNOWN);
         } /* Вероятнее всего это не оптимизированно когда бул стейта равен лжи,
         но я не нашел способ повторной регистрации эвента PlayerMoveEvent.

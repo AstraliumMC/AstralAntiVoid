@@ -16,8 +16,8 @@ public class ReloadCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
-        Player p = (Player) sender;
         if (!(sender instanceof ConsoleCommandSender)) {
+            Player p = (Player) sender;
             if (sender.hasPermission("astralantivoid.aavreload")) {
                 Config.reload();
                 p.sendMessage("§aКонфигурация плагина AstralAntiVoid успешно перезагружена!");
