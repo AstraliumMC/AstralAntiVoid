@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 import ru.didirus.astralantivoid.cfgs.Config;
 import ru.didirus.astralantivoid.methods.TeleportEvent;
 
@@ -14,7 +15,7 @@ import java.util.logging.Logger;
 public class ReloadCommand implements CommandExecutor {
 
   @Override
-  public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+  public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
 
     if (!(sender instanceof ConsoleCommandSender)) {
       Player p = (Player) sender;
