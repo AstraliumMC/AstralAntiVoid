@@ -1,5 +1,6 @@
 package ru.didirus.astralantivoid;
 
+import java.util.Objects;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import ru.didirus.astralantivoid.cfgs.Config;
@@ -18,8 +19,8 @@ public final class AstralAntiVoid extends JavaPlugin {
     Bukkit.getPluginManager().registerEvents(new TeleportEvent(), this);
     new TeleportEvent().EventUpdate();
 
-    getCommand("aavreload").setExecutor(new ReloadCommand());
-    getCommand("aavset").setExecutor(new SetCommand());
+    Objects.requireNonNull(getCommand("aavreload")).setExecutor(new ReloadCommand());
+    Objects.requireNonNull(getCommand("aavset")).setExecutor(new SetCommand());
 
     getLogger().warning("Successfully enabled without critical errors.");
   }
@@ -45,5 +46,4 @@ public final class AstralAntiVoid extends JavaPlugin {
     Config.get().options().copyDefaults(true);
     Config.save();
   }
-
 }

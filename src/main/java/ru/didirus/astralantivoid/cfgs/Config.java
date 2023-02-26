@@ -1,6 +1,7 @@
 package ru.didirus.astralantivoid.cfgs;
 
 
+import java.util.Objects;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -14,7 +15,7 @@ public class Config {
   private static FileConfiguration config;
 
   public static void create() {
-    file = new File(Bukkit.getServer().getPluginManager().getPlugin("AstralAntiVoid").getDataFolder(), "config.yml");
+    file = new File(Objects.requireNonNull(Bukkit.getServer().getPluginManager().getPlugin("AstralAntiVoid")).getDataFolder(), "config.yml");
 
     if (!file.exists()) {
       try {

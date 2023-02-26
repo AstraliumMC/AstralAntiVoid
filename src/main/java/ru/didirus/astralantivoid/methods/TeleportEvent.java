@@ -1,5 +1,6 @@
 package ru.didirus.astralantivoid.methods;
 
+import java.util.Objects;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.event.EventHandler;
@@ -18,7 +19,7 @@ public class TeleportEvent implements Listener {
   Logger logger = Logger.getLogger("");
 
   public boolean EventUpdate() {
-    if (!(Config.get().getBoolean("UseSpawnLoc")) == true) {
+    if (!(Config.get().getBoolean("UseSpawnLoc"))) {
       logger.log(
           Level.SEVERE,
           "< ! > The plugin doesn't use the main functionality (PlayerMoveEvent in TeleportEvent class), for further changes, use the /aavreload command"
@@ -33,7 +34,7 @@ public class TeleportEvent implements Listener {
   public void onPlayerMove(PlayerMoveEvent e) {
     if ((short) e.getPlayer().getLocation().getY() <= 0 && state) {
       Location l = new Location(
-          Bukkit.getWorld(Config.get().getString("World")), Config.get().getDouble("PosX"), Config.get().getDouble("PosY"), Config.get().getDouble("PosZ"),
+          Bukkit.getWorld(Objects.requireNonNull(Config.get().getString("World"))), Config.get().getDouble("PosX"), Config.get().getDouble("PosY"), Config.get().getDouble("PosZ"),
           (float) Config.get().getDouble("Yaw"), (float) Config.get().getDouble("Pitch")
       );
       e.getPlayer().teleport(l, PlayerTeleportEvent.TeleportCause.UNKNOWN);
