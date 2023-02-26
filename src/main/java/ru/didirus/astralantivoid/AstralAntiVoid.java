@@ -9,40 +9,41 @@ import ru.didirus.astralantivoid.methods.TeleportEvent;
 
 public final class AstralAntiVoid extends JavaPlugin {
 
-    @Override
-    public void onEnable() {
-        getLogger().warning("AstralAntiVoid will be using TeleportEvent.");
+  @Override
+  public void onEnable() {
+    getLogger().warning("AstralAntiVoid will be using TeleportEvent.");
 
-        cfg();
+    cfg();
 
-        Bukkit.getPluginManager().registerEvents(new TeleportEvent(), this);
-        new TeleportEvent().EventUpdate();
+    Bukkit.getPluginManager().registerEvents(new TeleportEvent(), this);
+    new TeleportEvent().EventUpdate();
 
-        getCommand("aavreload").setExecutor(new ReloadCommand());
-        getCommand("aavset").setExecutor(new SetCommand());
+    getCommand("aavreload").setExecutor(new ReloadCommand());
+    getCommand("aavset").setExecutor(new SetCommand());
 
-        getLogger().warning("Successfully enabled without critical errors.");
-    }
-    @Override
-    public void onDisable() {
+    getLogger().warning("Successfully enabled without critical errors.");
+  }
 
-    }
+  @Override
+  public void onDisable() {
 
-    public void cfg() {
+  }
 
-        getConfig().options().copyDefaults();
-        saveDefaultConfig();
+  public void cfg() {
 
-        Config.create();
-        Config.get().addDefault("UseSpawnLoc", false);
-        Config.get().addDefault("PosX", 0);
-        Config.get().addDefault("PosY", 0);
-        Config.get().addDefault("PosZ", 0);
-        Config.get().addDefault("Pitch", 0);
-        Config.get().addDefault("Yaw", 0);
-        Config.get().addDefault("World", "world");
-        Config.get().options().copyDefaults(true);
-        Config.save();
-    }
+    getConfig().options().copyDefaults();
+    saveDefaultConfig();
+
+    Config.create();
+    Config.get().addDefault("UseSpawnLoc", false);
+    Config.get().addDefault("PosX", 0);
+    Config.get().addDefault("PosY", 0);
+    Config.get().addDefault("PosZ", 0);
+    Config.get().addDefault("Pitch", 0);
+    Config.get().addDefault("Yaw", 0);
+    Config.get().addDefault("World", "world");
+    Config.get().options().copyDefaults(true);
+    Config.save();
+  }
 
 }
