@@ -34,7 +34,8 @@ public class TeleportEvent implements Listener {
   public void onPlayerMove(PlayerMoveEvent e) {
     if ((short) e.getPlayer().getLocation().getY() <= 0 && state) {
       Location l = new Location(
-          Bukkit.getWorld(Objects.requireNonNull(Config.get().getString("World"))), Config.get().getDouble("PosX"), Config.get().getDouble("PosY"), Config.get().getDouble("PosZ"),
+          Bukkit.getWorld(Objects.requireNonNull(Config.get().getString("World"))), Config.get().getDouble("PosX"), Config.get().getDouble("PosY"),
+          Config.get().getDouble("PosZ"),
           (float) Config.get().getDouble("Yaw"), (float) Config.get().getDouble("Pitch")
       );
       e.getPlayer().teleport(l, PlayerTeleportEvent.TeleportCause.UNKNOWN);
